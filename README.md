@@ -7,7 +7,7 @@ Most of ideas come from [WSL#4150](https://github.com/microsoft/WSL/issues/4150#
 ## Before you follow...
 * Install openssh-server.
 * Edit `/etc/ssh/sshd_config` if you want.
-* Open `/etc/sudoers` in WSL2 and append `%sudo ALL=NOPASSWD: /usr/sbin/service`. Then `sudo service` won't ask you password.
+* Open `/etc/sudoers` in WSL2 and append `%sudo ALL=NOPASSWD: /usr/sbin/service`. Then `sudo service` won't ask you a password.
 
 ## Installation
 1. Download `Port Forwarding.xml`, `Sshd for Ubuntu.xml` and `wslbridge.ps1`
