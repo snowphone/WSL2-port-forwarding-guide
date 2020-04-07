@@ -13,6 +13,6 @@ Most of ideas come from [WSL#4150](https://github.com/microsoft/WSL/issues/4150#
 1. Download `Port Forwarding.xml`, `Sshd for Ubuntu.xml` and `wslbridge.ps1`
 2. Move wslbridge.ps1 into C:\scripts
 3. Open wslbridge.ps1 and add ports you need.
-4. Open task scheduler and import two xml files. `Sshd for Ubuntu.xml` starts ssh service at startup. Thus you don't have to start it manually. Also, `Port Forwarding.xml` forwards ports from windows to WSL2 at startup.
-5. Reboot and test as you expected.
+4. Open task scheduler and import two xml files. `Sshd for Ubuntu.xml` starts ssh service at startup. Thus you don't have to start it manually. Also, `Port Forwarding.xml` forwards specified ports from windows ip to WSL2 ip at startup.
+5. Reboot and try `ssh <windows ip>`.
 
