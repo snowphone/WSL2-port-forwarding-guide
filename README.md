@@ -18,5 +18,6 @@ Most of ideas come from [WSL#4150](https://github.com/microsoft/WSL/issues/4150#
 Thus you don't have to start it manually. 
 Moreover, `Port Forwarding.xml` forwards specified ports from windows ip to WSL2 ip at startup.
     1. It may be required to edit xml files to change users.
+    2. Make sure `bash.exe` is linked to WSL2, not other things: docker, git bash, and so on.
 5. Reboot and try `ssh <IP address>`.
 
