@@ -10,14 +10,14 @@ Most of ideas come from [WSL#4150](https://github.com/microsoft/WSL/issues/4150#
 * Open `/etc/sudoers` in WSL2 and append `%sudo ALL=NOPASSWD: /usr/sbin/service`. Then `sudo service` won't ask you a password.
 
 ## Installation
-1. Download `Port Forwarding.xml`, `Sshd for Ubuntu.xml` and `wslbridge.ps1`
+1. Download `Port Forwarding.xml`, `Services for WSL2.xml` and `wslbridge.ps1`
 2. Move wslbridge.ps1 into C:\scripts
 3. Open wslbridge.ps1 and add ports you need.
-4. Open task scheduler and import two xml files. 
-`Sshd for Ubuntu.xml` starts ssh service at startup. 
-Thus you don't have to start it manually. 
+4. Open task scheduler and import two xml files.
+`Services for WSL2.xml` starts ssh service at startup.
+Thus you don't have to start it manually.
 Moreover, `Port Forwarding.xml` forwards specified ports from windows ip to WSL2 ip at startup.
-    1. It may be required to edit xml files to change users.
-    2. Make sure `bash.exe` is linked to WSL2, not other things: docker, git bash, and so on.
+    1. It may be required to edit xml files to change a username.
+    2. Make sure `wsl.exe` is linked to WSL2, not other things: docker, git bash, and so on.
 5. Reboot and try `ssh <IP address>`.
 
