@@ -1,4 +1,4 @@
-$remoteport = bash.exe -c "ifconfig eth0 | grep 'inet '"
+$remoteport = bash.exe -c "ip addr show eth0 | grep 'inet '"
 $found = $remoteport -match '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}';
 
 if( $found ){
