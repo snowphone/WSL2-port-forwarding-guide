@@ -11,14 +11,11 @@ It will be helpful for people who want to open an ssh server on WSL2.
 * Open `/etc/sudoers` in WSL2 and append `%sudo ALL=NOPASSWD: /usr/sbin/service`. Then `sudo service` won't ask you a password.
 
 ## Installation
-1. Download `Port Forwarding.xml`, `Services for WSL2.xml` and `wslbridge.ps1`
+1. Download this repository.
 2. Move wslbridge.ps1 into C:\scripts
-3. Open wslbridge.ps1 and add ports you need.
-4. Open task scheduler and import two xml files.
-`Services for WSL2.xml` starts ssh service at startup.
-Thus you don't have to start it manually.
-Moreover, `Port Forwarding.xml` forwards specified ports from windows ip to WSL2 ip at startup.
-    1. It may be required to edit xml files to change a username.
-    2. Make sure `wsl.exe` is linked to WSL2, not other things: docker, git bash, and so on.
-5. Reboot and try `ssh <IP address>`.
+3. Open wslbridge.ps1 in a editor (e.g. notepad) and add ports that you need.
+4. Open (`Port forwarding.ps1`, `Services for WSL2.ps1`) and replace {password} with yours.
+5. Open powershell as admin privilege.
+6. Copy each script (`Port forwarding.ps1`, `Services for WSL2.ps1`) and paste it to the shell.
 
+Then, now you open task scheduler and check whether two tasks are sucessfully registered.
